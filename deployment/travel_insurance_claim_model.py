@@ -17,7 +17,7 @@ st.set_page_config(
 def load_model():
     """Load the trained model pipeline with caching."""
     try:
-        model = joblib.load('travel_insurance_claim_model.sav')
+        model = joblib.load('deployment/travel_insurance_claim_model.sav')
         return model
     except FileNotFoundError:
         st.error("❌ Model file 'travel_insurance_claim_model.sav' not found. Please ensure the file is in the same directory as this app.")
@@ -418,4 +418,5 @@ def main():
         """)
 
 if __name__ == "__main__":
+
     main()
